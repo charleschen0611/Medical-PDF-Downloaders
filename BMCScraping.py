@@ -80,6 +80,8 @@ def scrapping():
 
             ### Going to article page
             
+            
+            
             ### Check the status of Page
             page =requests.get(url)
             if page.status_code==200:
