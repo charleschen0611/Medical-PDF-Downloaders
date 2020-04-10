@@ -20,6 +20,7 @@ from selenium.webdriver.support import expected_conditions
 import urllib
 #import urllib.request
 import time
+from datetime import datetime
 
 import wget
 
@@ -70,6 +71,10 @@ def scrapping():
         title = ""
         print(1)
         for rawTitle in rawTitles:
+            
+            ### Record the time before scraping each article
+            now = datetime.now()
+            
             driver1 = webdriver.Firefox(executable_path=executable_path)
             url = (rawTitle.get_attribute("href"))
 
@@ -138,6 +143,10 @@ def scrapping():
             j = j +1
         print("Finish downloading")    
         print("Loading additional articals from page ",(i+1))
+        
+        then = datetime.now()
+        print("Time used for the current page: ",str(then-now)) 
+        
         nextPage = driver.find_elements_by_xpath("//a[@class = 'c-pagination__link']")[-1]
         if nextPage:
 #             driver.execute_script("arguments[0].click();", nextPage)
@@ -153,10 +162,3 @@ def scrapping():
 
 if __name__ == "__main__":
     scrapping()
-
-
-# In[ ]:
-
-
-
-
