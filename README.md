@@ -1,7 +1,7 @@
 # Medical-PDF-Downloaders
 
 ### Python programs that allows one to download medical journals in pdf format in a certain category from various providers, including:
-- Natures
+- Nature
 - BMC
 - Elife
 - Plos
