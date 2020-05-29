@@ -8,4 +8,5 @@
 - PubMed
 - MDPI
 - PrePrints
+- CrossRef
 - More to come...
